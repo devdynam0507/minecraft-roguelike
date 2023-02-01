@@ -1,0 +1,8 @@
+
+processResources {
+    doFirst {
+        file("$buildDir/resources/main").listFiles().each {
+            it.delete()
+        }
+    }
+}
