@@ -1,4 +1,13 @@
 
+repositories {
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
+}
+
+dependencies {
+    implementation(platform("com.intellectualsites.bom:bom-1.18.x:1.23"))
+    compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
+}
+
 processResources {
     doFirst {
         file("$buildDir/resources/main").listFiles().each {
