@@ -5,10 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoadGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoomGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/RoadGeneratorStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/RoomGeneratorStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/TreeBasedRoomGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/TreeBasedRoomGeneratorContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/GridMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomGenerationOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/type/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStartPathFindContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/Directions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/world/VoidWorldGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoomGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/TreeBasedRoomGeneratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -75,11 +101,80 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "jdk.selected.JAVA_MODULE": "11"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.aldar.roguelike.map" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest">
+    <configuration name="GraphBasedRoomGeneratorTest.graphBasedRoomGenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":roguelike-core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.aldar.roguelike.map.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TreeBasedRoomGeneratorTest.treeRoomGenerator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":roguelike-core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.aldar.roguelike.map.TreeBasedRoomGeneratorTest.treeRoomGenerator&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest" />
+        <item itemvalue="Gradle.TreeBasedRoomGeneratorTest.treeRoomGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
