@@ -1,10 +1,8 @@
 package com.aldar.roguelike.map.data;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 
-@Getter
-@RequiredArgsConstructor
+@Data
 public class RoomGenerationOption {
 
     private final int roomAmount;

@@ -27,11 +27,14 @@ public class VirtualGrid {
     public void print() {
         for (int y = 0; y < grid[0].length; y++) {
             for (int x = 0; x < grid.length; x++) {
-                if (grid[x][y] != RoomType.ROOM) {
-                    System.out.print("□");
+                if (grid[x][y] == RoomType.ROOM) {
+                    System.out.print("■");
+                }
+                else if (grid[x][y] == RoomType.ROAD) {
+                    System.out.print("R");
                 }
                 else {
-                    System.out.print("■");
+                    System.out.print("□");
                 }
             }
             System.out.println();

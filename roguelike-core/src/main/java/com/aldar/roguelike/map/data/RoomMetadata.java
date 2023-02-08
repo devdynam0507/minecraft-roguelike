@@ -2,14 +2,13 @@ package com.aldar.roguelike.map.data;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
 @ToString
 public class RoomMetadata implements Comparable<RoomMetadata> {
 

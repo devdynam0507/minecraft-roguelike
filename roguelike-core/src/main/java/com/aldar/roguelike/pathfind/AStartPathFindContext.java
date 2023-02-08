@@ -3,21 +3,27 @@ package com.aldar.roguelike.pathfind;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkit.Location;
+import com.aldar.roguelike.pathfind.location.VirtualLocation3D;
 
-import lombok.RequiredArgsConstructor;
+public class AStartPathFindContext extends AbstractPathFindContext<PathFindScore, AStarPathFindImpl> {
 
-@RequiredArgsConstructor
-public class AStartPathFindContext {
+    public AStartPathFindContext(final AStarPathFindImpl pathFind) {
+        super(pathFind);
+    }
 
-    private final PathFind<PathFindScore> pathFind;
-
-    public List<PathFindScore> pathfinding(final Location origin, final Location dest) {
+    public List<PathFindScore> pathfinding(final VirtualLocation3D origin, final VirtualLocation3D dest) {
         final List<PathFindScore> results = new ArrayList<>();
+        final PathFind<PathFindScore> pathFind = super.getPathFind();
         PathFindScore selectMinScore = null;
         int minScoreValue = Integer.MAX_VALUE;
         do {
-            final List<PathFindScore> findScores = pathFind.getScores(origin, dest);
+            List<PathFindScore> findScores;
+            if (selectMinScore == null) {
+                findScores = pathFind.getScores(origin, dest);
+            }
+            else {
+                findScores = pathFind.getScores(selectMinScore.getLocation(), dest);
+            }
             for (final PathFindScore score : findScores) {
                 final int f = score.getScore();
                 if (minScoreValue > f) {
@@ -29,12 +35,5 @@ public class AStartPathFindContext {
         } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 1.0));
 
         return results;
-    }
-
-    private boolean isDiagonals(final Directions directions) {
-        return directions == Directions.NORTH_EAST ||
-               directions == Directions.NORTH_WEST ||
-               directions == Directions.SOUTH_EAST ||
-               directions == Directions.SOUTH_WEST;
     }
 }
