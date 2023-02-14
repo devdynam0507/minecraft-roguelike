@@ -4,9 +4,11 @@ import com.aldar.roguelike.pathfind.location.VirtualLocation3D;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @Getter
 @RequiredArgsConstructor
+@ToString
 public final class PathFindScore {
 
     private final int g, h;

@@ -27,12 +27,12 @@ public class AStarPathFindImpl implements AStarPathFind {
         final VirtualLocation3D east = point.clone().add(1, 0, 0);
         return Arrays.asList(
             PathFindScore.of(DEFAULT_SCORE, h(south, dest), south, Directions.SOUTH),
-            PathFindScore.of(DIAGONAL_SCORE, h(southEast, dest), southEast, Directions.SOUTH_EAST),
-            PathFindScore.of(DIAGONAL_SCORE, h(southWest, dest), southWest, Directions.SOUTH_WEST),
+//            PathFindScore.of(DIAGONAL_SCORE, h(southEast, dest), southEast, Directions.SOUTH_EAST),
+//            PathFindScore.of(DIAGONAL_SCORE, h(southWest, dest), southWest, Directions.SOUTH_WEST),
             PathFindScore.of(DEFAULT_SCORE, h(west, dest), west, Directions.WEST),
-            PathFindScore.of(DIAGONAL_SCORE, h(northWest, dest), northWest, Directions.NORTH_WEST),
+//            PathFindScore.of(DIAGONAL_SCORE, h(northWest, dest), northWest, Directions.NORTH_WEST),
             PathFindScore.of(DEFAULT_SCORE, h(north, dest), north, Directions.NORTH),
-            PathFindScore.of(DIAGONAL_SCORE, h(northEast, dest), northEast, Directions.NORTH_EAST),
+//            PathFindScore.of(DIAGONAL_SCORE, h(northEast, dest), northEast, Directions.NORTH_EAST),
             PathFindScore.of(DEFAULT_SCORE, h(east, dest), east, Directions.EAST));
     }
 }

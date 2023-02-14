@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AbstractPathFindContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoadGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/RoadGeneratorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/RoadGeneratorStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/TreeBasedRoomGeneratorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/TreeBasedRoomGeneratorContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/GridMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/GridMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomGenerationOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomGenerationOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/data/RoomMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/type/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/type/RoomType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStartPathFindContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStartPathFindContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStartPathFindContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoomGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoomGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoadGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoadGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

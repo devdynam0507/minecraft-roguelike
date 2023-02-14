@@ -2,17 +2,19 @@ package com.aldar.roguelike.pathfind;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 import com.aldar.roguelike.pathfind.location.VirtualLocation3D;
 
-public class AStartPathFindContext extends AbstractPathFindContext<PathFindScore, AStarPathFindImpl> {
+public class AStarPathFindContext extends AbstractPathFindContext<PathFindScore, AStarPathFindImpl> {
 
-    public AStartPathFindContext(final AStarPathFindImpl pathFind) {
+    public AStarPathFindContext(final AStarPathFindImpl pathFind) {
         super(pathFind);
     }
 
     public List<PathFindScore> pathfinding(final VirtualLocation3D origin, final VirtualLocation3D dest) {
         final List<PathFindScore> results = new ArrayList<>();
+        final Stack<PathFindScore> pathFindScores = new Stack<>();
         final PathFind<PathFindScore> pathFind = super.getPathFind();
         PathFindScore selectMinScore = null;
         int minScoreValue = Integer.MAX_VALUE;
@@ -32,8 +34,12 @@ public class AStartPathFindContext extends AbstractPathFindContext<PathFindScore
                 }
             }
             results.add(selectMinScore);
+            pathFindScores.add(selectMinScore);
         } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 1.0));
 
+//        while (!pathFindScores.empty()) {
+//            final PathFindScore score1 = pathFindScores.pop();
+//        }
         return results;
     }
 }

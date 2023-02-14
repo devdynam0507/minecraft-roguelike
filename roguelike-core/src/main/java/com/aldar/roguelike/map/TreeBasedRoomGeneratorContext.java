@@ -6,7 +6,7 @@ import com.aldar.roguelike.map.data.GridMetadata;
 import com.aldar.roguelike.map.data.RoomGenerationOption;
 import com.aldar.roguelike.map.data.RoomMetadata;
 import com.aldar.roguelike.map.type.RoomType;
-import com.aldar.roguelike.pathfind.AStartPathFindContext;
+import com.aldar.roguelike.pathfind.AStarPathFindContext;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class TreeBasedRoomGeneratorContext {
 
     private final RoomGeneratorStrategy roomGeneratorStrategy;
-    private final AStartPathFindContext pathFindContext;
+    private final AStarPathFindContext pathFindContext;
 
     public void generate(final RoomGenerationOption roomGenerationOption, final GridMetadata gridMetadata) {
         // 랜덤 맵 생성

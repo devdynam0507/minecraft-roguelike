@@ -2,6 +2,8 @@ package com.aldar.roguelike.map.data;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.aldar.roguelike.pathfind.location.VirtualLocation3D;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +19,10 @@ public class RoomMetadata implements Comparable<RoomMetadata> {
     private final int index;
     private final int roomWidth;
     private final int roomHeight;
+
+    public VirtualLocation3D toVirtualLocation() {
+        return VirtualLocation3D.of(x, y, z);
+    }
 
     @Override
     public int compareTo(@NotNull final RoomMetadata o) {
