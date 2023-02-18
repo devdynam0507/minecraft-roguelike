@@ -21,7 +21,7 @@ public class GraphBasedGenerator {
             final RoomGenerationOption roomGenerationOption, final GridMetadata gridMetadata) {
         final Graph rooms = roomGeneratorStrategy.generate(roomGenerationOption, gridMetadata);
         final Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>> graphPair = rooms.getGraphPair();
-        VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
+        final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
         for (final RoomMetadata roomMetadata : graphPair.getLeft()) {
             List<RoomMetadata> roomMetadata1 = graphPair.getRight().get(roomMetadata.getIndex());
             for (final RoomMetadata roomMetadata2 : roomMetadata1) {
