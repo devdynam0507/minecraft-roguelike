@@ -1,7 +1,6 @@
 package com.aldar.roguelike.map;
 
 import java.util.List;
-import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,14 +11,13 @@ import com.aldar.roguelike.map.type.RoomType;
 import com.aldar.roguelike.pathfind.AStarPathFindImpl;
 import com.aldar.roguelike.pathfind.AStarPathFindContext;
 import com.aldar.roguelike.pathfind.PathFindPostProcessor;
-import com.aldar.roguelike.utils.Pair;
 
 class GraphBasedRoadGeneratorTest {
 
     final GridMetadata gridMetadata = GridMetadata.of(16, 16);
     final RoomGeneratorStrategy<Graph> roomGenerator =
             new GraphBasedRoomGenerator();
-    final AStarPathFindContext pathFindContext = new AStarPathFindContext(new AStarPathFindImpl())
+    final AStarPathFindContext pathFindContext = new AStarPathFindContext(new AStarPathFindImpl());
     final PathFindPostProcessor postProcessor = new PathFindPostProcessor();
     RoadGeneratorStrategy<Graph> roadGeneratorStrategy = new GraphBasedRoadGenerator(
             gridMetadata, pathFindContext, postProcessor);
@@ -44,7 +42,7 @@ class GraphBasedRoadGeneratorTest {
         }
         virtualGrid.print();
         System.out.println("================================");
-        final VirtualGrid roadVG = roadGeneratorStrategy.generate(virtualGrid, Graph.to(rooms));
+        final VirtualGrid roadVG = roadGeneratorStrategy.generate(virtualGrid, rooms);
         roadVG.print();
     }
 }

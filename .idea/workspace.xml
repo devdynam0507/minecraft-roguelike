@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedRoomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/GraphBasedGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoadGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoadGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoomGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/GraphBasedRoomGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
