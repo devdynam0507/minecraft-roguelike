@@ -17,11 +17,12 @@ import com.aldar.roguelike.utils.Pair;
 class GraphBasedRoadGeneratorTest {
 
     final GridMetadata gridMetadata = GridMetadata.of(16, 16);
-    final RoomGeneratorStrategy<Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>>> roomGenerator =
+    final RoomGeneratorStrategy<Graph> roomGenerator =
             new GraphBasedRoomGenerator();
+    final AStarPathFindContext pathFindContext = new AStarPathFindContext(new AStarPathFindImpl())
     final PathFindPostProcessor postProcessor = new PathFindPostProcessor();
-    RoadGeneratorStrategy<Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>>> roadGeneratorStrategy =
-            new GraphBasedRoadGenerator(gridMetadata, new AStarPathFindContext(new AStarPathFindImpl()), postProcessor);
+    RoadGeneratorStrategy<Graph> roadGeneratorStrategy = new GraphBasedRoadGenerator(
+            gridMetadata, pathFindContext, postProcessor);
 
     @Test
     void test() {
@@ -31,11 +32,10 @@ class GraphBasedRoadGeneratorTest {
                                          10,
                                          10,
                                          10);
-        final Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>> rooms = roomGenerator.generate(
-                roomGenerationOption, gridMetadata);
+        final Graph rooms = roomGenerator.generate(roomGenerationOption, gridMetadata);
         final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
-        for (final RoomMetadata roomMetadata : rooms.getLeft()) {
-            List<RoomMetadata> roomMetadata1 = rooms.getRight().get(roomMetadata.getIndex());
+        for (final RoomMetadata roomMetadata : rooms.getGraphPair().getLeft()) {
+            List<RoomMetadata> roomMetadata1 = rooms.getGraphPair().getRight().get(roomMetadata.getIndex());
             for (final RoomMetadata roomMetadata2 : roomMetadata1) {
                 virtualGrid.setItem(roomMetadata2.getX(), roomMetadata2.getZ(), RoomType.ROOM);
             }
@@ -44,7 +44,7 @@ class GraphBasedRoadGeneratorTest {
         }
         virtualGrid.print();
         System.out.println("================================");
-        final VirtualGrid roadVG = roadGeneratorStrategy.generate(virtualGrid, rooms);
+        final VirtualGrid roadVG = roadGeneratorStrategy.generate(virtualGrid, Graph.to(rooms));
         roadVG.print();
     }
 }

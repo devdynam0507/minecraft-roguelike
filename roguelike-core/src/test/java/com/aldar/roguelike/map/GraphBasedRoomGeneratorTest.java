@@ -16,8 +16,7 @@ import com.aldar.roguelike.utils.Pair;
 
 class GraphBasedRoomGeneratorTest {
 
-    private final RoomGeneratorStrategy<
-            Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>>> strategy = new GraphBasedRoomGenerator();
+    private final RoomGeneratorStrategy<Graph> strategy = new GraphBasedRoomGenerator();
 
     @Test
     void graphBasedRoomGenTest() {
@@ -28,12 +27,11 @@ class GraphBasedRoomGeneratorTest {
                                          10,
                                          10);
         final GridMetadata gridMetadata = GridMetadata.of(16, 16);
-        final Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>> rooms = strategy.generate(
-                roomGenerationOption, gridMetadata);
+        final Graph rooms = strategy.generate(roomGenerationOption, gridMetadata);
         final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
 
-        for (final RoomMetadata roomMetadata : rooms.getLeft()) {
-            List<RoomMetadata> roomMetadata1 = rooms.getRight().get(roomMetadata.getIndex());
+        for (final RoomMetadata roomMetadata : rooms.getGraphPair().getLeft()) {
+            List<RoomMetadata> roomMetadata1 = rooms.getGraphPair().getRight().get(roomMetadata.getIndex());
             for (final RoomMetadata roomMetadata2 : roomMetadata1) {
                 virtualGrid.setItem(roomMetadata2.getX(), roomMetadata2.getZ(), RoomType.ROOM);
             }

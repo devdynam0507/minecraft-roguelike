@@ -18,8 +18,7 @@ import com.aldar.roguelike.utils.Pair;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class GraphBasedRoadGenerator implements RoadGeneratorStrategy<
-        Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>>> {
+public class GraphBasedRoadGenerator implements RoadGeneratorStrategy<Graph> {
 
     // TODO: 1. 연결할 두 방을 구한다.
     // TODO: 2. 두 방의 경로를 구하고 Virtual Grid 에 세팅한다.
@@ -30,69 +29,18 @@ public class GraphBasedRoadGenerator implements RoadGeneratorStrategy<
 
     @Override
     public VirtualGrid generate(
-            final Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>> generatedRoomGraphPair) {
+            final Graph generatedRoomGraphPair) {
         final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
         return generate(virtualGrid, generatedRoomGraphPair);
     }
 
     @Override
     public VirtualGrid generate(final VirtualGrid virtualGrid,
-                                final Pair<List<RoomMetadata>, Map<Integer, List<RoomMetadata>>> generatedRooms) {
-        final List<RoomMetadata> rooms = generatedRooms.getLeft();
-        final Map<Integer, List<RoomMetadata>> graph = generatedRooms.getRight();
+                                final Graph generatedRooms) {
+        final List<RoomMetadata> rooms = generatedRooms.getGraphPair().getLeft();
+        final Map<Integer, List<RoomMetadata>> graph = generatedRooms.getGraphPair().getRight();
         connectRoadRecursive(virtualGrid, graph, rooms.get(0));
         return virtualGrid;
-    }
-
-    private RoomType pickCornerRoadTypeRandom(final Directions directions) {
-        final int random = (int) (Math.random() * 1);
-        if (directions == Directions.SOUTH_EAST) {
-            final RoomType[] southEastDirections =
-                    new RoomType[] { RoomType.ROAD_CORNER_EAST_SOUTH, RoomType.ROAD_CORNER_SOUTH_EAST };
-            return southEastDirections[random];
-        }
-        else {
-            final RoomType[] southWestDirections =
-                    new RoomType[] { RoomType.ROAD_CORNER_SOUTH_WEST, RoomType.ROAD_CORNER_WEST_SOUTH };
-            return southWestDirections[random];
-        }
-    }
-
-    private boolean isNorthSouth(final Directions directions) {
-        return directions == Directions.NORTH || directions == Directions.SOUTH;
-    }
-
-    private boolean isEastWest(final Directions directions) {
-        return directions == Directions.EAST || directions == Directions.WEST;
-    }
-
-    private RoomType getRoadType(final List<PathFindScore> pathFindScores, final int currentIndex) {
-        if (currentIndex + 1 >= pathFindScores.size()) {
-            return null;
-        }
-        final Directions currentDirections = pathFindScores.get(currentIndex).getDirections();
-        final Directions nextDirections = pathFindScores.get(currentIndex + 1).getDirections();
-        if (currentDirections == nextDirections) {
-            if (isNorthSouth(currentDirections)) {
-                return RoomType.ROAD_NORTH_SOUTH;
-            }
-            return RoomType.ROAD_EAST_WEST;
-        }
-        if (isEastWest(currentDirections) && isNorthSouth(nextDirections)) {
-            if (currentDirections == Directions.WEST) {
-                return RoomType.ROAD_CORNER_WEST_SOUTH;
-            }
-            return RoomType.ROAD_CORNER_EAST_SOUTH;
-        }
-        else if (isNorthSouth(currentDirections) && isEastWest(nextDirections)) {
-            if (nextDirections == Directions.EAST) {
-                return RoomType.ROAD_CORNER_SOUTH_EAST;
-            }
-            else {
-                return RoomType.ROAD_CORNER_SOUTH_WEST;
-            }
-        }
-        return null;
     }
 
     public void connectRoadRecursive(
