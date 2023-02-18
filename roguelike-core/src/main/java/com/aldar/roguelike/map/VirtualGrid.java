@@ -30,6 +30,16 @@ public class VirtualGrid {
         grid[x][y] = roomType;
     }
 
+    public RoomType getItem(final int x, final int y) {
+        if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length) {
+            return RoomType.NONE;
+        }
+        if (grid[x][y] == null) {
+            return RoomType.NONE;
+        }
+        return grid[x][y];
+    }
+
     public int translate(final int n, final int weight) {
         return (n + 1) * weight;
     }
