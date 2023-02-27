@@ -14,7 +14,6 @@ public class AStarPathFindContext extends AbstractPathFindContext<PathFindScore,
 
     public List<PathFindScore> pathfinding(final VirtualLocation3D origin, final VirtualLocation3D dest) {
         final List<PathFindScore> results = new ArrayList<>();
-        final Stack<PathFindScore> pathFindScores = new Stack<>();
         final PathFind<PathFindScore> pathFind = super.getPathFind();
         PathFindScore selectMinScore = null;
         int minScoreValue = Integer.MAX_VALUE;
@@ -34,12 +33,8 @@ public class AStarPathFindContext extends AbstractPathFindContext<PathFindScore,
                 }
             }
             results.add(selectMinScore);
-            pathFindScores.add(selectMinScore);
-        } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 0.0));
+       } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 0.0));
 
-//        while (!pathFindScores.empty()) {
-//            final PathFindScore score1 = pathFindScores.pop();
-//        }
         return results;
     }
 }
