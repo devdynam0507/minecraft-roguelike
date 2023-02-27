@@ -35,7 +35,7 @@ public class AStarPathFindContext extends AbstractPathFindContext<PathFindScore,
             }
             results.add(selectMinScore);
             pathFindScores.add(selectMinScore);
-        } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 1.0));
+        } while (selectMinScore == null || !(selectMinScore.getLocation().distance(dest) <= 0.0));
 
 //        while (!pathFindScores.empty()) {
 //            final PathFindScore score1 = pathFindScores.pop();
