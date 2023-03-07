@@ -46,6 +46,10 @@ public class VirtualLocation3D implements Cloneable {
                NumberConversions.square(z - o.z);
     }
 
+    public VirtualLocation3D normalize(final int gridSize) {
+        return VirtualLocation3D.of(x * gridSize, y, z * gridSize);
+    }
+
     public static VirtualLocation3D of(final int x, int y, int z) {
         return new VirtualLocation3D(x, y, z);
     }

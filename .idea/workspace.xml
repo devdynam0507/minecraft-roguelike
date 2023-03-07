@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pool/RoguelikeMapArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pool/RoguelikeMapQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/pool/RoguelikeMapQueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/AStarPathFindContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +62,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -93,10 +96,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.aldar.roguelike.pool" />
       <recent name="com.aldar.roguelike.map" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GraphBasedRoadGeneratorTest.test (1)">
+  <component name="RunManager" selected="Gradle.RoguelikeMapQueueTest.poolThreadSafeTest">
     <configuration name="GraphBasedRoadGeneratorTest.test (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -143,6 +147,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="RoguelikeMapQueueTest.poolThreadSafeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":roguelike-core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.aldar.roguelike.pool.RoguelikeMapQueueTest.poolThreadSafeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TreeBasedRoomGeneratorTest.treeRoomGenerator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,6 +195,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RoguelikeMapQueueTest.poolThreadSafeTest" />
         <item itemvalue="Gradle.GraphBasedRoadGeneratorTest.test (1)" />
         <item itemvalue="Gradle.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest (1)" />
         <item itemvalue="Gradle.TreeBasedRoomGeneratorTest.treeRoomGenerator" />
