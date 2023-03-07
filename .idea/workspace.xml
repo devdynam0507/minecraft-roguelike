@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/world/VoidWorldGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/world/VoidWorldGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +60,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>

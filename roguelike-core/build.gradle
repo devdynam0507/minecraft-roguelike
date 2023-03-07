@@ -6,6 +6,8 @@ repositories {
 dependencies {
     implementation(platform("com.intellectualsites.bom:bom-1.18.x:1.23"))
     compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
+    compileOnly('com.sk89q.worldedit:worldedit-bukkit:7.2.9-SNAPSHOT')
+    compileOnly('com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit')
 }
 
 processResources {
