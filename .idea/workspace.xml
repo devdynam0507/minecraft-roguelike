@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pool/RoguelikeMapArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pool/RoguelikeMapQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/pool/RoguelikeMapQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/world/VoidWorldGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/world/VoidWorldGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
