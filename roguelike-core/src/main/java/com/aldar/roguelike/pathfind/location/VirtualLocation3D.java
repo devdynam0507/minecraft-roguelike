@@ -1,6 +1,7 @@
 package com.aldar.roguelike.pathfind.location;
 
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.util.NumberConversions;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,9 +23,14 @@ public class VirtualLocation3D implements Cloneable {
         return this;
     }
 
-    public Location toMinecraftLocation() {
-        // TODO: Convert minecraft location
-        return null;
+    /**
+     * GridSize 기준으로 위치를 정규화 한 후 실제 마인크래프트 Location 객체를 반환합니다.
+     * @param world 로그라이크 월드
+     * @param gridSize 격자 하나의 너비, 높이
+     */
+    public Location toMinecraftLocationWithNormalize(final World world, final int gridSize) {
+        final VirtualLocation3D normalized = normalize(gridSize);
+        return new Location(world, normalized.getX(), normalized.getY(), normalized.getZ());
     }
 
     @Override

@@ -49,8 +49,10 @@ public class DefaultVirtualGridRenderer implements VirtualGridRenderer {
                 final int _x = start.getX() + x;
                 final int _z = end.getZ() + y;
                 // 실제 마인크래프트 좌표로 정규화 합니다.
-                final VirtualLocation3D normalize =
-                        VirtualLocation3D.of(_x, start.getY(), _z).normalize(gridMetadata.getGridBlockWidth());
+                final Location normalize =
+                        VirtualLocation3D.of(_x, start.getY(), _z)
+                                         .toMinecraftLocationWithNormalize(RoguelikePlugin.getRoguelikeWorld(),
+                                                                           gridMetadata.getGridBlockWidth());
                 // TODO: RoomType에 따른 스케메틱을 로드해야합니다.
                 final File schematicFile = new File("todo.file.schematic");
                 final Location location = new Location(RoguelikePlugin.getRoguelikeWorld(), normalize.getX(),
