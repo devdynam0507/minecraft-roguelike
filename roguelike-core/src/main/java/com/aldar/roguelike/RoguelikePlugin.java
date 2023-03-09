@@ -7,10 +7,14 @@ import com.aldar.roguelike.world.VoidWorldGenerator;
 
 public class RoguelikePlugin extends JavaPlugin {
 
-    private World roguelikeWorld;
+    private static World roguelikeWorld;
 
     @Override
     public void onEnable() {
-        this.roguelikeWorld = VoidWorldGenerator.generateEmptyWorld("roguelike_world", this);
+        roguelikeWorld = VoidWorldGenerator.generateEmptyWorld("roguelike_world", this);
+    }
+
+    public static World getRoguelikeWorld() {
+        return roguelikeWorld;
     }
 }

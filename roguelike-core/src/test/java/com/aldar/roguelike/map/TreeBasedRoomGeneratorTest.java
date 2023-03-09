@@ -22,7 +22,7 @@ class TreeBasedRoomGeneratorTest {
                                          10,
                                          10,
                                          10);
-        final GridMetadata gridMetadata = GridMetadata.of(16, 32);
+        final GridMetadata gridMetadata = GridMetadata.of(16, 32, 32, 32);
         final TreeSet<RoomMetadata> rooms = roomGeneratorStrategy.generate(
                 roomGenerationOption, gridMetadata);
         final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);

@@ -14,7 +14,7 @@ import com.aldar.roguelike.pathfind.PathFindPostProcessor;
 
 class GraphBasedRoadGeneratorTest {
 
-    final GridMetadata gridMetadata = GridMetadata.of(16, 16);
+    final GridMetadata gridMetadata = GridMetadata.of(16, 16, 32, 32);
     final RoomGeneratorStrategy<Graph> roomGenerator =
             new GraphBasedRoomGenerator();
     final AStarPathFindContext pathFindContext = new AStarPathFindContext(new AStarPathFindImpl());

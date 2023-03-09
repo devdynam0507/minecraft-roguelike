@@ -26,7 +26,7 @@ class GraphBasedRoomGeneratorTest {
                                          10,
                                          10,
                                          10);
-        final GridMetadata gridMetadata = GridMetadata.of(16, 16);
+        final GridMetadata gridMetadata = GridMetadata.of(16, 16, 32, 32);
         final Graph rooms = strategy.generate(roomGenerationOption, gridMetadata);
         final VirtualGrid virtualGrid = new VirtualGrid(gridMetadata);
 
