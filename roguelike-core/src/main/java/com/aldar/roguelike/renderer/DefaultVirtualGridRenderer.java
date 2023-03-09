@@ -1,6 +1,7 @@
 package com.aldar.roguelike.renderer;
 
 import java.io.File;
+import static java.util.Objects.requireNonNull;
 
 import org.bukkit.Location;
 
@@ -21,10 +22,22 @@ public class DefaultVirtualGridRenderer implements VirtualGridRenderer {
     @Override
     public Pair<RoguelikeMapArea, VirtualGrid> render(
             final GridMetadata gridMetadata, final VirtualGrid virtualGrid, final RoguelikeMapArea area) {
+        requireNonNull(gridMetadata, "GridMetadata cannot be null");
+        requireNonNull(virtualGrid, "VirtualGrid cannot be null");
+        requireNonNull(area, "RoguelikeMapArea cannot be null");
+
+        final int width = virtualGrid.width();
+        final int height = virtualGrid.height();
+        if (width > area.getWidth()) {
+            throw new IllegalArgumentException("VirtualGrid width isn't bigger then area width");
+        }
+        if (height > area.getHeight()) {
+            throw new IllegalArgumentException("VirtualGrid width isn't bigger then area width");
+        }
         final VirtualLocation3D start = area.getStart();
         final VirtualLocation3D end = area.getEnd();
-        for (int x = 0; x < virtualGrid.width(); x++) {
-            for (int y = 0; y < virtualGrid.height(); y++) {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
                 final RoomType item = virtualGrid.getItem(x, y);
                 if (item == null || item == RoomType.NONE) {
                     continue;
