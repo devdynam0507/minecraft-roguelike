@@ -25,11 +25,17 @@ public class PathFindPostProcessor {
             final Path path1 = mapToPaths.get(p1);
             final Path path2 = mapToPaths.get(p2);
             if (path1.getOriginalDirection() != path2.getOriginalDirection()) {
-                final RoomType roomType =
-                        RoomType.valueOf("ROAD_CORNER_" +
-                                         path1.getOriginalDirection().name() +
-                                         "_" +
-                                         path2.getOriginalDirection().name());
+                RoomType roomType;
+                if (path1.getOriginalDirection() == Directions.SOUTH &&
+                    path2.getOriginalDirection() == Directions.NORTH) {
+                    roomType = RoomType.ROAD_NORTH_SOUTH;
+                }
+                else {
+                    roomType = RoomType.valueOf("ROAD_CORNER_" +
+                                                path1.getOriginalDirection().name() +
+                                                "_" +
+                                                path2.getOriginalDirection().name());
+                }
                 path1.setRoomType(roomType);
                 if (p2 == mapToPaths.size() - 1) {
                     path2.setRoomType(getRoomType(path2));

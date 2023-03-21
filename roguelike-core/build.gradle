@@ -1,19 +1,63 @@
 
 repositories {
     maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+
+        // As of Gradle 5.1, you can limit this to only those
+        // dependencies you expect from it
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+    /*
+     As Spigot-API depends on the BungeeCord ChatComponent-API,
+    we need to add the Sonatype OSS repository, as Gradle,
+    in comparison to maven, doesn't want to understand the ~/.m2
+    directory unless added using mavenLocal(). Maven usually just gets
+    it from there, as most people have run the BuildTools at least once.
+    This is therefore not needed if you're using the full Spigot/CraftBukkit,
+    or if you're using the Bukkit API.
+    */
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/central' }
+    maven { url = 'https://maven.enginehub.org/repo/'}
+}
+
+//sourceSets {
+//    main {
+//        resources {
+//            srcDirs "src/main/resources"
+//        }
+//    }
+//}
+
+jar {
+    from('src/main/resources') {
+        include '**/*.*'
+    }
+
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    // 이 부분 추가
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 dependencies {
-    implementation(platform("com.intellectualsites.bom:bom-1.18.x:1.23"))
-    compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
-    compileOnly('com.sk89q.worldedit:worldedit-bukkit:7.2.9-SNAPSHOT')
-    compileOnly('com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit')
+    compileOnly(platform("com.intellectualsites.bom:bom-1.18.x:1.23"))
+    compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core:2.6.0")
+    compileOnly('com.sk89q.worldedit:worldedit-bukkit:7.2.14-SNAPSHOT')
+    compileOnly('com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit:2.6.0')
 }
 
-processResources {
-    doFirst {
-        file("$buildDir/resources/main").listFiles().each {
-            it.delete()
-        }
-    }
-}
+//processResources {
+//    doFirst {
+//        file("$buildDir/resources/main").listFiles().each {
+//            it.delete()
+//        }
+//    }
+//}

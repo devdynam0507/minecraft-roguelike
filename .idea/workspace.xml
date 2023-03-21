@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/command/RoguelikeCoreCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/DefaultSchematicStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/Schematic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/SchematicStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/VirtualGridRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/VirtualGridRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/roguelike-core">
           <activation />
         </task>
         <projects_view>
@@ -47,6 +60,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Roguelike-minecraft" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Roguelike-minecraft" type="f1a62948:ProjectNode" />
+                <item name="roguelike-core" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Roguelike-minecraft" type="f1a62948:ProjectNode" />
+                <item name="roguelike-core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Roguelike-minecraft" type="f1a62948:ProjectNode" />
+                <item name="roguelike-core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -98,105 +129,119 @@
       <recent name="com.aldar.roguelike.map" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RoguelikeMapQueueTest.poolThreadSafeTest">
-    <configuration name="GraphBasedRoadGeneratorTest.test (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Roguelike-minecraft:roguelike-core [jar]">
+    <configuration name="Roguelike-minecraft [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":roguelike-core:test" />
-            <option value="--tests" />
-            <option value="&quot;com.aldar.roguelike.map.GraphBasedRoadGeneratorTest.test&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GraphBasedRoomGeneratorTest.graphBasedRoomGenTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Roguelike-minecraft [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":roguelike-core:test" />
-            <option value="--tests" />
-            <option value="&quot;com.aldar.roguelike.map.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest&quot;" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RoguelikeMapQueueTest.poolThreadSafeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Roguelike-minecraft [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":roguelike-core:test" />
-            <option value="--tests" />
-            <option value="&quot;com.aldar.roguelike.pool.RoguelikeMapQueueTest.poolThreadSafeTest&quot;" />
+            <option value="testClasses" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TreeBasedRoomGeneratorTest.treeRoomGenerator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Roguelike-minecraft:roguelike-core [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/roguelike-core" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":roguelike-core:test" />
-            <option value="--tests" />
-            <option value="&quot;com.aldar.roguelike.map.TreeBasedRoomGeneratorTest.treeRoomGenerator&quot;" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Roguelike-minecraft:roguelike-core [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/roguelike-core" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RoguelikeMapQueueTest.poolThreadSafeTest" />
-        <item itemvalue="Gradle.GraphBasedRoadGeneratorTest.test (1)" />
-        <item itemvalue="Gradle.GraphBasedRoomGeneratorTest.graphBasedRoomGenTest (1)" />
-        <item itemvalue="Gradle.TreeBasedRoomGeneratorTest.treeRoomGenerator" />
+        <item itemvalue="Gradle.Roguelike-minecraft:roguelike-core [jar]" />
+        <item itemvalue="Gradle.Roguelike-minecraft [jar]" />
+        <item itemvalue="Gradle.Roguelike-minecraft:roguelike-core [testClasses]" />
+        <item itemvalue="Gradle.Roguelike-minecraft [testClasses]" />
+        <item itemvalue="Gradle.Roguelike-minecraft [build]" />
       </list>
     </recent_temporary>
   </component>

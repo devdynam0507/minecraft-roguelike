@@ -1,3 +1,8 @@
 name: roguelike
 version: 1.0
 main: com.aldar.roguelike.RoguelikePlugin
+softdepend: [WorldEdit]
+
+commands:
+  rog:
+    description: Core test command of roguelike
