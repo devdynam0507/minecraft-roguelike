@@ -28,7 +28,7 @@ public class VirtualLocation3D implements Cloneable {
      * @param world 로그라이크 월드
      * @param gridSize 격자 하나의 너비, 높이
      */
-    public Location toMinecraftLocationWithNormalize(final World world, final int gridSize) {
+    public Location normalize(final World world, final int gridSize) {
         final VirtualLocation3D normalized = normalize(gridSize);
         return new Location(world, normalized.getX(), normalized.getY(), normalized.getZ());
     }

@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/command/RoguelikeCoreCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/DefaultSchematicStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/Schematic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/SchematicStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/RoguelikePlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/VirtualGridRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/VirtualGridRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

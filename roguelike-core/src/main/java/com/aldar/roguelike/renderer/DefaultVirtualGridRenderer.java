@@ -5,6 +5,7 @@ import static java.util.Objects.requireNonNull;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 
 import com.aldar.roguelike.RoguelikePlugin;
@@ -38,41 +39,41 @@ public class DefaultVirtualGridRenderer implements VirtualGridRenderer {
         final int width = virtualGrid.width();
         final int height = virtualGrid.height();
         if (width > area.getWidth()) {
-            throw new IllegalArgumentException("VirtualGrid width isn't bigger then area width");
+            throw new IllegalArgumentException("VirtualGrid width cannot bigger then area width");
         }
         if (height > area.getHeight()) {
             throw new IllegalArgumentException("VirtualGrid width cannot bigger then area width");
         }
         final VirtualLocation3D start = area.getStart();
         final VirtualLocation3D end = area.getEnd();
-        Location startpoint = null;
+        Location startPoint = null;
+        final World roguelikeWorld = RoguelikePlugin.getRoguelikeWorld();
+        final int gridWidth = gridMetadata.getGridBlockWidth();
+        final int gridHeight = gridMetadata.getGridBlockHeight();
         for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                final RoomType item = virtualGrid.getItem(x, y);
+            for (int z = 0; z < height; z++) {
+                final RoomType item = virtualGrid.getItem(x, z);
                 if (item == null || item == RoomType.NONE) {
                     continue;
                 }
-                final int _x = start.getX() + (x * gridMetadata.getGridBlockWidth());
-                final int _z = end.getZ() + (y * gridMetadata.getGridBlockHeight());
+                final int _x = start.getX() + (x * gridWidth);
+                final int _z = end.getZ() + (z * gridHeight);
                 // 실제 마인크래프트 좌표로 정규화 합니다.
                 final Location normalize =
-                        VirtualLocation3D.of(_x, start.getY(), _z)
-                                         .toMinecraftLocationWithNormalize(RoguelikePlugin.getRoguelikeWorld(),
-                                                                           gridMetadata.getGridBlockWidth());
-                final Location location = new Location(RoguelikePlugin.getRoguelikeWorld(), normalize.getX(),
-                                                       80, normalize.getZ());
-                if (startpoint == null) {
-                    startpoint = location;
+                        VirtualLocation3D.of(_x, start.getY(), _z).normalize(roguelikeWorld, gridWidth);
+                normalize.setY(80);
+                if (startPoint == null) {
+                    startPoint = normalize;
                 }
                 // 방 타입에 따른 스케메틱 정보 가져오기
                 final Schematic schematic = schematicStrategy.getSchematic(item);
                 // 비동기로 스케메틱 렌더링
                 Bukkit.getScheduler().runTaskAsynchronously(
                     RoguelikePlugin.getPlugin(),
-                    () -> WorldEditUtils.pasteSchematicAsync(schematic, location));
+                    () -> WorldEditUtils.pasteSchematicAsync(schematic, normalize));
             }
         }
-        player.teleport(requireNonNull(startpoint));
+        player.teleport(requireNonNull(startPoint));
 
         return Pair.of(area, virtualGrid);
     }
