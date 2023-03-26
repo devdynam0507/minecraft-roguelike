@@ -5,6 +5,7 @@ import static java.util.Objects.requireNonNull;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
@@ -46,31 +47,38 @@ public class DefaultVirtualGridRenderer implements VirtualGridRenderer {
         }
         final VirtualLocation3D start = area.getStart();
         final VirtualLocation3D end = area.getEnd();
-        Location startPoint = null;
         final World roguelikeWorld = RoguelikePlugin.getRoguelikeWorld();
         final int gridWidth = gridMetadata.getGridBlockWidth();
         final int gridHeight = gridMetadata.getGridBlockHeight();
-        for (int x = 0; x < width; x++) {
-            for (int z = 0; z < height; z++) {
+        Location startPoint = null;
+        for (int z = 0; z < height; z++) {
+            final int _z = end.getZ() + ((z + 1) * gridHeight / 2);
+            for (int x = 0; x < width; x++) {
                 final RoomType item = virtualGrid.getItem(x, z);
                 if (item == null || item == RoomType.NONE) {
                     continue;
                 }
-                final int _x = start.getX() + (x * gridWidth);
-                final int _z = end.getZ() + (z * gridHeight);
-                // 실제 마인크래프트 좌표로 정규화 합니다.
-                final Location normalize =
-                        VirtualLocation3D.of(_x, start.getY(), _z).normalize(roguelikeWorld, gridWidth);
-                normalize.setY(80);
+                final int _x = start.getX() + ((x + 1) * gridWidth / 2);
+                final Location location = new Location(roguelikeWorld, _x, 40, _z);
                 if (startPoint == null) {
-                    startPoint = normalize;
+                    startPoint = location;
                 }
+
                 // 방 타입에 따른 스케메틱 정보 가져오기
                 final Schematic schematic = schematicStrategy.getSchematic(item);
+                if (schematic == null) {
+                    System.out.println("Continued. " + item);
+                    continue;
+                }
                 // 비동기로 스케메틱 렌더링
-                Bukkit.getScheduler().runTaskAsynchronously(
+                // TODO: 방 문 뚫기
+                Bukkit.getScheduler().runTaskLaterAsynchronously(
                     RoguelikePlugin.getPlugin(),
-                    () -> WorldEditUtils.pasteSchematicAsync(schematic, normalize));
+                    () -> {
+                        WorldEditUtils.pasteSchematicAsync(schematic, location);
+                    },
+                    2000L
+                );
             }
         }
         player.teleport(requireNonNull(startPoint));

@@ -30,7 +30,11 @@ public class VirtualLocation3D implements Cloneable {
      */
     public Location normalize(final World world, final int gridSize) {
         final VirtualLocation3D normalized = normalize(gridSize);
-        return new Location(world, normalized.getX(), normalized.getY(), normalized.getZ());
+        return normalized.toMinecraftLocation(world);
+    }
+
+    public Location toMinecraftLocation(final World world) {
+        return new Location(world, x, y, z);
     }
 
     @Override

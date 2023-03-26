@@ -44,7 +44,7 @@ public class RoguelikeCoreCommand implements CommandExecutor {
                              @NotNull final String label,
                              @NotNull final String[] args) {
         final RoomGenerationOption roomGenerationOption =
-                new RoomGenerationOption(16,
+                new RoomGenerationOption(14,
                                          10,
                                          10,
                                          10,
@@ -60,7 +60,8 @@ public class RoguelikeCoreCommand implements CommandExecutor {
         }
         final VirtualGrid roadVG = roadGeneratorStrategy.generate(virtualGrid, rooms);
         final RoguelikeMapQueue queue = new RoguelikeMapQueue(10, 32, 32);
-        final VirtualGridRenderer renderer = new DefaultVirtualGridRenderer(queue, new DefaultSchematicStrategy());
+        final VirtualGridRenderer renderer =
+                new DefaultVirtualGridRenderer(queue, new DefaultSchematicStrategy(RoguelikePlugin.schematics));
         roadVG.print();
         renderer.render(gridMetadata, roadVG, queue.get(), (Player) sender);
         return false;

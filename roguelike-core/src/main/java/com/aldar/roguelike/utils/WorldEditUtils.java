@@ -3,6 +3,7 @@ package com.aldar.roguelike.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 import org.bukkit.Location;
 
@@ -28,17 +29,25 @@ public class WorldEditUtils {
     public static void pasteSchematicAsync(final Schematic schematic, final Location location) {
         final EditSession editSession =
                 pasteSchematicAsync(location, schematic.getFile(), schematic.getRotate());
+        BlockVector3 minimumPoint = Objects.requireNonNull(editSession).getMinimumPoint();
+        int minX = minimumPoint.getBlockX();
+        int minZ = minimumPoint.getBlockZ();
+        BlockVector3 maximumPoint = editSession.getMaximumPoint();
+        int maxX = maximumPoint.getBlockX();
+        int maxZ = maximumPoint.getBlockZ();
         schematic.setEditSession(editSession);
+        schematic.setCenter(new Location(
+            location.getWorld(), minX + ((maxX - minZ) / 2.0), 0, minZ + ((maxZ - minZ) / 2.0)
+        ));
     }
 
-    public static EditSession pasteSchematicAsync(final Location location, final File schematicFile, final  int rotate) {
+    public static EditSession pasteSchematicAsync(final Location location, final File schematicFile, final int rotate) {
         final BlockVector3 blockVector3 =
                 BlockVector3.at(location.getBlockX(), location.getBlockY(), location.getBlockZ());
         try(Clipboard clipboard = FaweAPI.load(schematicFile)) {
             final AffineTransform transform = new AffineTransform()
                     .translate(blockVector3)
-                    .rotateX(rotate)
-                    .rotateZ(rotate);
+                    .rotateY(rotate);
             final World world = FaweAPI.getWorld(location.getWorld().getName());
             return clipboard.paste(world, blockVector3, true, false, transform);
         } catch (IOException e) {

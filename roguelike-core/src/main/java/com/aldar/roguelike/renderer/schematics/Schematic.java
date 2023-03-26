@@ -2,6 +2,8 @@ package com.aldar.roguelike.renderer.schematics;
 
 import java.io.File;
 
+import org.bukkit.Location;
+
 import com.aldar.roguelike.map.type.RoomType;
 import com.sk89q.worldedit.EditSession;
 
@@ -14,4 +16,5 @@ public class Schematic {
     private final RoomType roomType;
     private final int rotate;
     private EditSession editSession;
+    private Location center;
 }
