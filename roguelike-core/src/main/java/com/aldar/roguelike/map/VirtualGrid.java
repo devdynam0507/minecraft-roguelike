@@ -30,6 +30,10 @@ public class VirtualGrid {
         grid[x][y] = roomType;
     }
 
+    public void setItemForce(final int x, final int y, final RoomType roomType) {
+        grid[x][y] = roomType;
+    }
+
     public RoomType getItem(final int x, final int y) {
         if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length) {
             return RoomType.NONE;
@@ -60,6 +64,10 @@ public class VirtualGrid {
                     case ROAD_CORNER_SOUTH_EAST -> System.out.print("┖");
                     case ROAD_CORNER_SOUTH_WEST -> System.out.print("┚");
                     case ROAD_CORNER_WEST_SOUTH -> System.out.print("┍");
+                    case ROAD_3WAY_NORTH_EAST_WEST -> System.out.print("┳");
+                    case ROAD_3WAY_SOUTH_EAST_WEST -> System.out.print("┷");
+                    case ROAD_3WAY_EAST_NORTH_SOUTH -> System.out.print("┫");
+                    case ROAD_3WAY_WEST_NORTH_SOUTH -> System.out.print("┣");
                     default -> System.out.print("□");
                 }
             }

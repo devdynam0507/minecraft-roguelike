@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64b3ee-4543-40c9-91b3-7852c507d900" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGreed3WayPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGridPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roguelike-core/src/test/java/com/aldar/roguelike/map/VirtualGreed3WayPostProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/command/RoguelikeCoreCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/command/RoguelikeCoreCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/PathFindPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/pathfind/location/VirtualLocation3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/DefaultVirtualGridRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/VirtualGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/type/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/map/type/RoomType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/DefaultSchematicStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/DefaultSchematicStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/Schematic.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/renderer/schematics/Schematic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/roguelike-core/src/main/java/com/aldar/roguelike/utils/WorldEditUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +84,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -120,11 +119,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.aldar.roguelike.pool" />
       <recent name="com.aldar.roguelike.map" />
+      <recent name="com.aldar.roguelike.pool" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Roguelike-minecraft:roguelike-core [jar]">
+  <component name="RunManager" selected="Gradle.VirtualGreed3WayPostProcessorTest.test3WayConvert">
     <configuration name="GraphBasedRoadGeneratorTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -160,27 +159,6 @@
         <option name="taskNames">
           <list>
             <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Roguelike-minecraft [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,13 +210,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="VirtualGreed3WayPostProcessorTest.test3WayConvert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":roguelike-core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.aldar.roguelike.map.VirtualGreed3WayPostProcessorTest.test3WayConvert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Roguelike-minecraft:roguelike-core [jar]" />
+        <item itemvalue="Gradle.VirtualGreed3WayPostProcessorTest.test3WayConvert" />
         <item itemvalue="Gradle.GraphBasedRoadGeneratorTest.test" />
+        <item itemvalue="Gradle.Roguelike-minecraft:roguelike-core [jar]" />
         <item itemvalue="Gradle.Roguelike-minecraft [jar]" />
         <item itemvalue="Gradle.Roguelike-minecraft:roguelike-core [testClasses]" />
-        <item itemvalue="Gradle.Roguelike-minecraft [testClasses]" />
       </list>
     </recent_temporary>
   </component>

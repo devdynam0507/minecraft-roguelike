@@ -32,8 +32,8 @@ public class DefaultSchematicStrategy implements SchematicStrategy {
     public Schematic getSchematic(final RoomType roomType) {
         switch (roomType) {
             case ROOM -> {return new Schematic(schematicFile.get("room"), roomType, 0);}
-            case ROAD_EAST_WEST -> {return new Schematic(schematicFile.get("straight_road"), roomType, 0);}
-            case ROAD_NORTH_SOUTH -> {return new Schematic(schematicFile.get("straight_road"), roomType, 90);}
+            case ROAD_EAST_WEST -> {return new Schematic(schematicFile.get("straight_road"), roomType, 90);}
+            case ROAD_NORTH_SOUTH -> {return new Schematic(schematicFile.get("straight_road"), roomType, 0);}
             case ROAD_CORNER_EAST_SOUTH -> {
                 return new Schematic(schematicFile.get("corner_road"), roomType, 180);
             }
